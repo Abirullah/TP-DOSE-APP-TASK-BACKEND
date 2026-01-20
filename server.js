@@ -9,11 +9,13 @@ import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 
- app.use(cors({
-    origin: "https://frontend.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-}));
+ app.use(
+   cors({
+     origin: "https://to-does-app-task-frontend.vercel.app/",
+     methods: ["GET", "POST", "PUT", "DELETE"],
+     credentials: true,
+   }),
+ );
 app.use(express.json());
 
 connectDB();
